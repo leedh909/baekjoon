@@ -8,7 +8,6 @@ public class Q11650 {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("입력하라");
 		int num = sc.nextInt();
 		int[][] point = new int[num][2];
 		
@@ -19,6 +18,32 @@ public class Q11650 {
 			point[i][1] = y;
 		}
 		
+		int tmp[] = new int[2];
+		
+		for(int i=0;i<num-1;i++) {
+			
+			for(int j=i+1;j<num;j++) {
+				
+				if(point[i][0]>point[j][0]) {
+					tmp = point[i];
+					point[i]=point[j];
+					point[j]=tmp;
+				}else if(point[i][0]==point[j][0]) {
+					
+					if(point[i][1]>point[j][1]) {
+						tmp = point[i];
+						point[i]=point[j];
+						point[j]=tmp;
+					}
+
+				}
+	
+			}
+
+		}
+		for(int i=0;i<num;i++) {
+			System.out.println(point[i][0]+" "+point[i][1]);
+		}
 	}
 }
 
