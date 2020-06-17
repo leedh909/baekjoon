@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class Q10814 {
-
+	//나이순 정렬
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
